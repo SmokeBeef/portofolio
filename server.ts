@@ -1,11 +1,11 @@
-// server.js
-const { createServer } = require('http')
-const { parse } = require('url')
-const next = require('next')
+import { createServer } from "http"
+import {parse} from "url"
+import next from "next"
+import Error from "next/error"
 
 const dev = process.env.NODE_ENV !== 'production'
 const hostname = 'localhost'
-const port = process.env.port || 8080
+const port: number =  8080
 // when using middleware `hostname` and `port` must be provided below
 const app = next({ dev, hostname, port })
 const handle = app.getRequestHandler()
@@ -30,8 +30,7 @@ app.prepare().then(() => {
             res.statusCode = 500
             res.end('internal server error')
         }
-    }).listen(port, (err: any) => {
-        if (err) throw err
+    }).listen(port, () => {
         console.log(`> Ready on http://${hostname}:${port}`)
     })
 })
