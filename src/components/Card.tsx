@@ -6,7 +6,7 @@ interface prop {
   image?: string;
   children: any;
   link?: string;
-  class?: string
+  class?: string;
 }
 const Card = (props: prop) => {
   return (

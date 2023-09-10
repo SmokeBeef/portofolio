@@ -1,9 +1,13 @@
 import React from "react";
 import Image from "next/image";
 
-const TextAnimation = () => {
+interface props{
+  className: string
+}
+
+const TextAnimation = (props: props) => {
   return (
-    <div className="text-[2.26rem]  uppercase h-[100vh] flex flex-col  justify-center">
+    <div className={"text-[2.26rem]  uppercase h-[100vh] flex flex-col  justify-center "+props.className}>
       <p className="">{"Hello 👋 I'm"}</p>
       <section className="h-[50px] overflow-hidden ">
         <div className=" first:animate-text-slide ">

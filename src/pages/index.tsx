@@ -22,28 +22,73 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main id="top" className={`font-Poppins min-h- text-slate-50 bg-slate-900`}>
+      <main
+        id="top"
+        className={`font-Poppins min-h- text-slate-50 bg-slate-900`}
+      >
         <Navbar />
+
         <div className=" mx-auto bg-fixed -mt-16 bg-slate-900">
-          <div className="px-4  mx-auto container">
-            <TextAnimation />
-            <div className="">
-              {/* <Image alt="" src={'/IMG_1770.JPG'} width={500} height={500} /> */}
+          <div className="px-4  mx-auto container flex items-center">
+            <TextAnimation className="flex-1" />
+            <div className="flex-1 ">
+              <div className="font-mono bg-black rounded-md mx-10">
+                <div className="flex justify-between">
+                  <div className="flex gap-2 px-4 pt-3">
+                    <span className="bg-red-600 inline-block w-3 h-3 rounded-full"></span>
+                    <span className="bg-yellow-600 inline-block w-3 h-3 rounded-full"></span>
+                    <span className="bg-green-500 inline-block w-3 h-3 rounded-full"></span>
+                  </div>
+                  {/* <p className="px-4 pt-3 text-end">data.json {"{}"}</p> */}
+                </div>
+                <div className="p-12">
+                  {"{"}
+                  <br />
+                  <p className="indent-10 ">
+                    <span className="text-purple-400">&quot;name&quot;</span>:{" "}
+                    <span className="text-orange-500">&quot;Deva&quot;</span>
+                  </p>
+                  <p className="indent-10">
+                    <span className="text-purple-400">
+                      &quot;interest&quot;
+                    </span>
+                    :{" "}
+                    <span className="text-orange-500">
+                      &quot;Back End&quot;
+                    </span>
+                  </p>
+                  <p className="indent-10">
+                    &quot;nama&quot;: &quot;Deva&quot;
+                  </p>
+                  <p className="indent-10">&quot;nama&quot;: {"{"}</p>
+                  <p className="indent-20"></p>
+                  <p className="indent-20">&quot;nama&quot;: </p>
+                  <p className="indent-10">{"}"} </p>
+
+                  {"}"}
+                </div>
+              </div>
+              {/* <div className="flex-1 bg-[url('/mypict.JPG')] w-full h-auto bg-center bg-contain bg-no-repeat rounded-full "> */}
+              {/* <Image className="rounded-full " src='/mypict.JPG' alt="mypict" width={5184} height={3456} /> */}
             </div>
           </div>
           <div id="porto" className="bg-slate-900  min-h-screen">
             <h2 className="text-4xl text-center pt-28">My Project</h2>
             <div className="relative flex justify-center mx-4 ">
-              <div id="slider" className=" w-full overflow-x-scroll  flex  py-4 scroll-smooth">
+              <div
+                id="slider"
+                className=" w-full overflow-x-scroll  flex  py-4 scroll-smooth"
+              >
                 {data.map((value, index) => (
-
-              <Card title={value.title} class="mx-4 first:ml-0 first:pl-0  last:mr-0 last:pl-0" key={index} image={value.image}>
-                <p className="">
-                  {value.desc}
-                </p>
-              </Card>
+                  <Card
+                    title={value.title}
+                    class="mx-4 first:ml-0 first:pl-0  last:mr-0 last:pl-0"
+                    key={index}
+                    image={value.image}
+                  >
+                    <p className="">{value.desc}</p>
+                  </Card>
                 ))}
-              
               </div>
             </div>
           </div>

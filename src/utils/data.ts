@@ -4,9 +4,9 @@ const data: Array<{
   desc: string;
 }> = [
   {
-    title: "Toko ",
+    title: "Toko Dashboard",
     image: "/porto1.png",
-    desc: "MERN stack, i useing mongo, express, react using nextjs, and nodejs. and Deployment with vercel.",
+    desc: "To solving problem at home when my family doesn't know price of some stuff ",
   },
   {
     title: "Toko dashboard",
